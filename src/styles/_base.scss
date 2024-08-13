@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  --color-primary: #7091e6;
+  --color-primary-dark: #3d52a0;
+  --color-secondary: #f6f3fb;
+  --color-secondary-light: #adbbda;
+  --color-secondary-dark: #8697c4;
+
+  --text-light: #fff;
+  --text-dark: #27293b;
+
+  --border-xs: 2px;
+  --border-sm: 5px;
+  --border-md: 7px;
+  --border-lg: 9px;
+
+  --font-family-dec: "Casual";
+  --font-family: "Lora", serif;
+
+  --box-shadow: 0 1.5px 6px rgba(134, 151, 196, 0.4);
+
+  --max-width: 1200px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family);
+
+  @include respond(tab-land) {
+    font-size: 68.75%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+}
+
+*:disabled {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
