@@ -7,8 +7,12 @@
   align-items: center;
 
   @include respond(tab-port) {
-    grid-template-columns: 20rem 1fr 15rem;
+    grid-template-columns: 20rem 1fr 17rem;
     gap: 3rem;
+  }
+
+  @include respond(tab-land) {
+    padding: 0;
   }
 
   &__logo {

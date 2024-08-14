@@ -16,7 +16,7 @@ export const Header: React.FC<HeaderProps> = ({
     <img src={logo} alt="Edita Motuze" className={styles.header__logo} />
     <Tabs handleActiveTab={handleActiveTab} activeTab={activeTab} />
     <a href={cv} download="Edita_Motuze_CV" className={styles.header__cv}>
-      <Button text="Download CV" />
+      <Button text="Download CV" type="outlined" />
     </a>
   </header>
 );
