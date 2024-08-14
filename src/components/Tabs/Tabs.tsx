@@ -35,7 +35,7 @@ interface TabsProps {
   handleActiveTab: (tab: TabsNameType) => void;
 }
 
-const Tabs: React.FC<TabsProps> = ({ activeTab, handleActiveTab }) => {
+export const Tabs: React.FC<TabsProps> = ({ activeTab, handleActiveTab }) => {
   const handleKeyDown = (
     e: React.KeyboardEvent<HTMLDivElement>,
     tab: TabsNameType
@@ -68,5 +68,3 @@ const Tabs: React.FC<TabsProps> = ({ activeTab, handleActiveTab }) => {
     </div>
   );
 };
-
-export default Tabs;
