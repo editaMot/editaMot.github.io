@@ -1,0 +1,39 @@
+.section {
+  padding: 1rem;
+  border-radius: 1rem;
+  transition: flex-grow 0.3s ease-in-out, width 0.3s ease-in-out;
+  position: relative;
+
+  @include respond(tab-port) {
+    height: 75vh;
+    width: 7rem;
+  }
+
+  &--expanded {
+    flex-grow: 3;
+    width: 100%;
+    background-color: var(--color-secondary);
+  }
+
+  &--collapsed {
+    flex-grow: 1;
+    background-color: var(--color-secondary-dark);
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+
+    @include respond(tab-port) {
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      position: absolute;
+      bottom: 0;
+      left: 1.5rem;
+      white-space: nowrap;
+    }
+  }
+}
