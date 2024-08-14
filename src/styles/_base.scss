@@ -34,13 +34,10 @@
 html {
   font-size: 62.5%;
   font-family: var(--font-family);
+  background-color: var(--color-secondary-light);
 
   @include respond(tab-land) {
     font-size: 68.75%;
-  }
-
-  @include respond(big-desktop) {
-    font-size: 75%;
   }
 }
 
