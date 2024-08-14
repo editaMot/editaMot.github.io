@@ -1,15 +1,30 @@
 .tabs {
   display: flex;
   flex-direction: row;
-  margin: 2rem 0;
+  margin: 1rem 0;
   padding: 0.7rem;
   border-radius: 4rem;
   overflow: hidden;
   background: var(--color-secondary);
   box-shadow: var(--box-shadow);
+  grid-row: 2;
+  grid-column: span 2;
 
   @include respond(phone) {
+    justify-self: center;
+    width: 80%;
+    margin: 2rem 0;
     padding: 1rem;
+  }
+
+  @include respond(tab-port) {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+  }
+
+  @include respond(tab-land) {
+    width: 80%;
   }
 
   &__tab {
