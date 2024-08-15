@@ -1,0 +1,41 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border-radius: var(--border-sm);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3 /2;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    color: var(--color-primary-dark);
+  }
+
+  &__tools {
+    display: flex;
+    gap: 2rem;
+    width: 2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
