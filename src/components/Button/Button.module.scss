@@ -1,4 +1,9 @@
 .btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   padding: 1rem 1.5rem;
   background-color: var(--color-secondary);
   border: none;
@@ -11,6 +16,14 @@
   @include respond(phone) {
     padding: 1.2rem 2rem;
     font-size: 1.7rem;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1em;
+    width: 1em;
   }
 
   &--primary {
@@ -28,6 +41,18 @@
 
     &:hover {
       border-color: var(--color-secondary);
+    }
+  }
+
+  &--text {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    background-color: transparent;
+
+    &:hover {
+      text-decoration: underline;
+      color: var(--color-primary-dark);
     }
   }
 }
