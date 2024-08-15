@@ -22,8 +22,11 @@ export const Card: React.FC<CardProps> = ({
   image,
   tools,
 }) => {
+  const handleCardClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={handleCardClick}>
       <img
         src={image}
         alt={title}
