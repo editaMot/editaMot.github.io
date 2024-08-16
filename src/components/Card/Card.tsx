@@ -38,7 +38,7 @@ export const Card: React.FC<CardProps> = ({
         <h3 className={styles.card__heading}>{title}</h3>
         <div className={styles.card__tools}>
           {tools.map(({ title, image }) => (
-            <img src={image} alt={title} loading="lazy" />
+            <img src={image} alt={title} loading="lazy" key={title} />
           ))}
         </div>
         <div className={styles.card__buttons}>
