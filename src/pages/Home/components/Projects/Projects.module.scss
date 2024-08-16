@@ -29,22 +29,4 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
-
-  &::-webkit-scrollbar {
-    width: 1.2rem;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: var(--text-light);
-    border-radius: 1rem;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--color-secondary-light);
-    border-radius: 1rem;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: var(--color-secondary-dark);
-  }
 }
