@@ -1,0 +1,50 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  overflow-y: auto;
+  height: 100%;
+
+  @include respond(phone) {
+    gap: 4rem;
+  }
+
+  &__heading {
+    font-size: 3rem;
+    color: var(--color-primary-dark);
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 1.2rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--text-light);
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-secondary-light);
+    border-radius: 1rem;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary-dark);
+  }
+}
