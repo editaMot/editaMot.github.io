@@ -4,3 +4,4 @@ export * from "./Header/Header";
 export * from "./Main/Main";
 export * from "./Section/Section";
 export * from "./Tabs/Tabs";
+export * from "./Input/Input";
