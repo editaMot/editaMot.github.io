@@ -1,14 +1,20 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Button, Input } from "../../../../../components";
 import styles from "./Form.module.scss";
+import { emailSending } from "../../../../../utils/emailSending";
+import { useState } from "react";
 
-interface FormValues {
+export interface FormValues {
   name: string;
   email: string;
   message: string;
 }
 
 export const Form: React.FC = () => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
   const {
     register,
     handleSubmit,
@@ -17,8 +23,21 @@ export const Form: React.FC = () => {
   } = useForm<FormValues>();
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
-    reset();
+    setLoading(true);
+    setError(null);
+    setSuccess(null);
+
+    emailSending(import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID_MESSAGE, data)
+      .then(() => {
+        setSuccess(true);
+        reset();
+      })
+      .catch(() => {
+        setError("There was an error sending your message.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -49,7 +68,7 @@ export const Form: React.FC = () => {
         error={errors?.message?.message}
         {...register("message", { required: "Enter your message" })}
       />
-      <Button text="Submit" type="outlined" size="small" />
+      <Button text="Submit" type="outlined" size="small" disabled={loading} />
     </form>
   );
 };
