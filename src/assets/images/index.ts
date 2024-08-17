@@ -25,6 +25,7 @@ import router from "./router.png";
 import sassDark from "./Sass.svg";
 import scss from "./scss.png";
 import styledComponent from "./StyledComponents.svg";
+import success from "./success.svg";
 import { default as supabase, default as supabaseDark } from "./supabase.png";
 import tailwind from "./TailwindCSS-Dark.svg";
 import ts from "./ts.png";
@@ -61,6 +62,7 @@ export {
   sassDark,
   scss,
   styledComponent,
+  success,
   supabase,
   supabaseDark,
   tailwind,
