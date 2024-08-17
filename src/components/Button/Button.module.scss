@@ -63,4 +63,16 @@
       color: var(--color-primary-dark);
     }
   }
+
+  &--disabled {
+    background-color: var(--color-grey);
+    color: var(--color-grey-light);
+    cursor: not-allowed;
+    box-shadow: none;
+    border: none;
+
+    &:hover {
+      background-color: var(--color-grey);
+    }
+  }
 }
