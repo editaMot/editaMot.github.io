@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Button, Input, Loader } from "../../../../../components";
+import { Button, Error, Input, Loader } from "../../../../../components";
 import { emailSending } from "../../../../../utils/emailSending";
 import styles from "./Form.module.scss";
 
@@ -13,7 +13,7 @@ export interface FormValues {
 export const Form: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [success, setSuccess] = useState<boolean | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<boolean>(false);
 
   const {
     register,
@@ -24,7 +24,7 @@ export const Form: React.FC = () => {
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     setLoading(true);
-    setError(null);
+    setError(false);
     setSuccess(null);
 
     emailSending(import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID_MESSAGE, data)
@@ -33,7 +33,7 @@ export const Form: React.FC = () => {
         reset();
       })
       .catch(() => {
-        setError("There was an error sending your message.");
+        setError(true);
       })
       .finally(() => {
         setLoading(false);
@@ -41,6 +41,15 @@ export const Form: React.FC = () => {
   };
 
   if (loading) return <Loader />;
+
+  if (error)
+    return (
+      <Error
+        errorMessage={
+          "There was an error sending your message. Try again later."
+        }
+      />
+    );
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>

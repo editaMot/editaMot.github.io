@@ -23,5 +23,6 @@ export const emailSending = (
     })
     .catch((error) => {
       console.error("Failed to send email:", error.text);
+      return Promise.reject(error);
     });
 };
