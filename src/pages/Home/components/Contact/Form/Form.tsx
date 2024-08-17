@@ -1,8 +1,8 @@
-import { SubmitHandler, useForm } from "react-hook-form";
-import { Button, Input } from "../../../../../components";
-import styles from "./Form.module.scss";
-import { emailSending } from "../../../../../utils/emailSending";
 import { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { Button, Input, Loader } from "../../../../../components";
+import { emailSending } from "../../../../../utils/emailSending";
+import styles from "./Form.module.scss";
 
 export interface FormValues {
   name: string;
@@ -39,6 +39,8 @@ export const Form: React.FC = () => {
         setLoading(false);
       });
   };
+
+  if (loading) return <Loader />;
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
