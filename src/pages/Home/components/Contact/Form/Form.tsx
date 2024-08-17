@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { Button, Error, Input, Loader } from "../../../../../components";
+import { Success } from "../../../../../components/Success/Success";
 import { emailSending } from "../../../../../utils/emailSending";
 import styles from "./Form.module.scss";
 
@@ -10,9 +11,13 @@ export interface FormValues {
   message: string;
 }
 
-export const Form: React.FC = () => {
+interface FormProps {
+  success: boolean | null;
+  setSuccess: (success: boolean | null) => void;
+}
+
+export const Form: React.FC<FormProps> = ({ success, setSuccess }) => {
   const [loading, setLoading] = useState<boolean>(false);
-  const [success, setSuccess] = useState<boolean | null>(null);
   const [error, setError] = useState<boolean>(false);
 
   const {
@@ -50,6 +55,8 @@ export const Form: React.FC = () => {
         }
       />
     );
+
+  if (success) return <Success />;
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
