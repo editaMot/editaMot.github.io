@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 1rem 1.5rem;
   background-color: var(--color-secondary);
   border: none;
   border-radius: 4rem;
@@ -13,17 +12,26 @@
   font-family: inherit;
   color: var(--text-dark);
 
-  @include respond(phone) {
-    padding: 1.2rem 2rem;
-    font-size: 1.7rem;
-  }
-
   &__icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     height: 1em;
     width: 1em;
+  }
+
+  &--small {
+    padding: 0.7rem 1rem;
+    font-size: 1.4rem;
+  }
+
+  &--medium {
+    padding: 1rem 1.5rem;
+
+    @include respond(phone) {
+      padding: 1.2rem 2rem;
+      font-size: 1.7rem;
+    }
   }
 
   &--primary {
