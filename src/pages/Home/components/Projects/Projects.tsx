@@ -1,5 +1,5 @@
-import { Card } from "../../../../components/Card/Card";
-import { PROJECTS } from "../../../../data/projects";
+import { Card } from "@components/index";
+import { PROJECTS } from "@data/projects";
 import styles from "./Projects.module.scss";
 
 export const Projects: React.FC = () => (

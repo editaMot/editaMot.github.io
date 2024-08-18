@@ -1,5 +1,5 @@
-import { EXPERIENCE } from "../../../../data/experience";
-import { FAMILIAR_SKILLS, SKILLS } from "../../../../data/skills";
+import { EXPERIENCE } from "@data/experience";
+import { FAMILIAR_SKILLS, SKILLS } from "@data/skills";
 import { ExperienceList } from "./ExperienceList/ExperienceList";
 import styles from "./Skills.module.scss";
 import { SkillsList } from "./SkillsList/SkillList";

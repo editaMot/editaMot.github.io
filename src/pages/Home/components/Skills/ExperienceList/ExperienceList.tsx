@@ -1,5 +1,5 @@
+import { Experience } from "@data/experience";
 import { BsCheckLg } from "react-icons/bs";
-import { Experience } from "../../../../../data/experience";
 import styles from "./ExperienceList.module.scss";
 
 interface ExperienceListProps {
