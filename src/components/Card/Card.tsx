@@ -1,5 +1,5 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
-import { Button } from "../Button/Button";
+import { Button } from "../index";
 import styles from "./Card.module.scss";
 
 interface Tool {

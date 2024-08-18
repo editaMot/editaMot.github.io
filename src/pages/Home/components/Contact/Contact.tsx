@@ -5,6 +5,7 @@ import { Form } from "./Form/Form";
 
 export const Contact: React.FC = () => {
   const [success, setSuccess] = useState<boolean | null>(null);
+
   return (
     <div className={styles.contact} onClick={(e) => e.stopPropagation()}>
       <h2 className={styles.contact__heading}>Let's connect!</h2>
