@@ -1,5 +1,5 @@
-import myPhoto from "../../../../assets/images/myPhoto.png";
-import { SocialMedia } from "../../../../components";
+import { myPhoto } from "@assets/images/index";
+import { SocialMedia } from "@components/index";
 import styles from "./About.module.scss";
 
 export const About: React.FC = () => (

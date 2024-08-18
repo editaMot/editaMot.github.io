@@ -1,8 +1,7 @@
+import { Button, Error, Input, Loader, Success } from "@components/index";
+import { emailSending } from "@utils/emailSending";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { Button, Error, Input, Loader } from "../../../../../components";
-import { Success } from "../../../../../components/Success/Success";
-import { emailSending } from "../../../../../utils/emailSending";
 import styles from "./Form.module.scss";
 
 export interface FormValues {

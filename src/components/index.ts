@@ -7,4 +7,5 @@ export * from "./Loader/Loader";
 export * from "./Main/Main";
 export * from "./Section/Section";
 export * from "./SocialMedia/SocialMedia";
+export * from "./Success/Success";
 export * from "./Tabs/Tabs";

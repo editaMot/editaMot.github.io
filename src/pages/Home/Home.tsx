@@ -1,5 +1,5 @@
+import { Header, Main, Section, TabsNameType } from "@components/index";
 import { ReactNode, useEffect, useState } from "react";
-import { Header, Main, Section, TabsNameType } from "../../components/index";
 import { About, Contact, Projects, Skills } from "./components";
 
 interface Section {

@@ -1,4 +1,4 @@
-import { SkillsItem } from "../../../../../data/skills";
+import { SkillsItem } from "@data/skills";
 import styles from "./SkillList.module.scss";
 
 interface SkillsListProp {
