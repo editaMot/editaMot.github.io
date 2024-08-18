@@ -26,7 +26,9 @@ export const SocialMedia: React.FC = () => (
   <ul className={styles.socialMedia}>
     {SOCIAL_MEDIA.map(({ title, image, url }) => (
       <li key={title} className={styles.socialMedia__item}>
-        <a href={url}>{image}</a>
+        <a href={url} target="_blank">
+          {image}
+        </a>
       </li>
     ))}
   </ul>
