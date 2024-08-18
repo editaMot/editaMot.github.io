@@ -14,4 +14,4 @@ Here is a list of the projects included in this portfolio:
 Feel free to reach out if you have any questions or suggestions! You can contact me via:
 
 Email: edita.motuze@gmail.com
-LinkedIn: [[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://skillicons.dev)](https://www.linkedin.com/in/edita-motuze/)
+LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/edita-motuze)
