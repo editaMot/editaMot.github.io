@@ -1,5 +1,5 @@
-import cv from "../../assets/files/cv.pdf";
-import logo from "../../assets/images/logo.svg";
+import cv from "@assets/files/cv.pdf";
+import logo from "@assets/images/logo.svg";
 import { Button, Tabs, TabsNameType } from "../index";
 import styles from "./Header.module.scss";
 

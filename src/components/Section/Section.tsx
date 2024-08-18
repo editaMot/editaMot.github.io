@@ -13,16 +13,14 @@ export const Section: React.FC<SectionProps> = ({
   content,
   isExpanded,
   handleSectionClick,
-}) => {
-  return (
-    <section
-      className={`${styles.section} ${
-        isExpanded ? styles["section--expanded"] : styles["section--collapsed"]
-      }`}
-      onClick={handleSectionClick}
-    >
-      {!isExpanded && <p className={styles.section__title}>{title}</p>}
-      {isExpanded && content}
-    </section>
-  );
-};
+}) => (
+  <section
+    className={`${styles.section} ${
+      isExpanded ? styles["section--expanded"] : styles["section--collapsed"]
+    }`}
+    onClick={handleSectionClick}
+  >
+    {!isExpanded && <p className={styles.section__title}>{title}</p>}
+    {isExpanded && content}
+  </section>
+);

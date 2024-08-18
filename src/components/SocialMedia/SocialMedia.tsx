@@ -22,14 +22,12 @@ const SOCIAL_MEDIA: SocialMedia[] = [
   },
 ];
 
-export const SocialMedia: React.FC = () => {
-  return (
-    <ul className={styles.socialMedia}>
-      {SOCIAL_MEDIA.map(({ title, image, url }) => (
-        <li key={title} className={styles.socialMedia__item}>
-          <a href={url}>{image}</a>
-        </li>
-      ))}
-    </ul>
-  );
-};
+export const SocialMedia: React.FC = () => (
+  <ul className={styles.socialMedia}>
+    {SOCIAL_MEDIA.map(({ title, image, url }) => (
+      <li key={title} className={styles.socialMedia__item}>
+        <a href={url}>{image}</a>
+      </li>
+    ))}
+  </ul>
+);
