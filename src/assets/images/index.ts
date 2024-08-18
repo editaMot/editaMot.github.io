@@ -15,6 +15,7 @@ import mui from "./MaterialUI-Dark.svg";
 import mongodb from "./mongodb.png";
 import mongodbDark from "./MongodbDark.svg";
 import mountainCabin from "./mountain_cabin.jpg";
+import myPhoto from "./myPhoto.png";
 import natureLovers from "./nature-lovers.jpg";
 import query from "./query.png";
 import react from "./React-Dark.svg";
@@ -53,6 +54,7 @@ export {
   mongodbDark,
   mountainCabin,
   mui,
+  myPhoto,
   natureLovers,
   query,
   react,
