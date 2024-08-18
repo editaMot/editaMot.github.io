@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { Header, Main, Section, TabsNameType } from "../../components/index";
 import { About, Contact, Projects, Skills } from "./components";
 
-const sections = [
+interface Section {
+  name: string;
+  title: string;
+  content: ReactNode;
+}
+
+const sections: Section[] = [
   { name: "about", title: "About", content: <About /> },
-  { name: "projects", title: "My Works", content: <Projects /> },
   { name: "skills", title: "Skills", content: <Skills /> },
+  { name: "projects", title: "My Works", content: <Projects /> },
   { name: "contact", title: "Contact Me", content: <Contact /> },
 ];
 
