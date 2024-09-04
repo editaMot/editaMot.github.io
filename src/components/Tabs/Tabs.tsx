@@ -14,13 +14,13 @@ const TABS: Tabs = {
     title: "About",
     hashLink: "#about",
   },
-  projects: {
-    title: "My Works",
-    hashLink: "#projects",
-  },
   skills: {
     title: "Skills",
     hashLink: "#skills",
+  },
+   projects: {
+    title: "My Works",
+    hashLink: "#projects",
   },
   contact: {
     title: "Contact",
