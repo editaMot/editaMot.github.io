@@ -20,7 +20,7 @@
   }
 
   @include respond(big-desktop) {
-    height: 65vh;
+    height: fit-content;
   }
 
   &--expanded {
