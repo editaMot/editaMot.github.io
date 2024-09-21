@@ -12,21 +12,20 @@
 
   @include respond(tab-port) {
     padding-bottom: 2rem;
-    height: 75vh;
   }
 
   @include respond(tab-land) {
     width: 7rem;
   }
 
-  @include respond(big-desktop) {
-    height: fit-content;
-  }
-
   &--expanded {
     flex-grow: 3;
     width: 100%;
     background-color: var(--color-secondary);
+
+    @include respond(tab-land) {
+      min-height: 80vh;
+    }
   }
 
   &--collapsed {
