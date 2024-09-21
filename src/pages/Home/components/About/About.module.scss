@@ -4,15 +4,10 @@
   align-items: center;
   justify-items: center;
   padding: 2rem 1rem;
-  overflow-y: auto;
   height: 100%;
 
   @include respond(tab-port) {
     padding: 0;
-  }
-
-  @include respond(tab-land) {
-    margin-top: -2rem;
   }
 
   @include respond(big-desktop) {

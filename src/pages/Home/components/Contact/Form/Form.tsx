@@ -71,7 +71,7 @@ export const Form: React.FC<FormProps> = ({ success, setSuccess }) => {
         type="email"
         error={errors?.email?.message}
         {...register("email", {
-          required: "This field is required",
+          required: "Enter your email",
           pattern: {
             value: /\S+@\S+\.\S+/,
             message: "Please provide a valid email address",
